@@ -7,6 +7,7 @@
 //
 
 #import "CategoryTableViewController.h"
+#import "CatogeryCell.h"
 
 @interface CategoryTableViewController ()
 
@@ -26,6 +27,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+   
 
 }
 
@@ -44,17 +46,34 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-
-    return 0;
+    NSLog(@"The array list count from table view is %lu", (unsigned long)_list.count);
+    return self.list.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
     // Configure the cell...
+    CatogeryCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if(cell == nil){
+        cell = [[CatogeryCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
     
+    long row = [indexPath row];
+    
+    NSDictionary *catogery = [self.list objectAtIndex:row];
+    //NSInteger category_id = [catogery objectForKey:@"category_id"];
+    NSString *catogery_name = [catogery objectForKey:@"category_name"];
+    NSString *url = [NSString stringWithFormat:@"http://app.petdiscounts.com/admin/%@",[catogery objectForKey:@"category_marker"]];
+    
+    
+    NSURL *imageURL = [NSURL URLWithString:url];
+    NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
+    UIImage *image = [UIImage imageWithData:imageData];
+    
+    NSLog(@"category row is %@", url);
+    cell.catogeryLabel.text = catogery_name;
+    cell.catogeryPicture.image = image;
     return cell;
 }
 

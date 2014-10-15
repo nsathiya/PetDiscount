@@ -13,33 +13,30 @@ static NSString* const BaseURLString = @"http://app.petdiscounts.com/admin/";
 
 @implementation ServerCalls
 
-+ (NSArray *) catogery_list
++ (void) catogery_list:(void (^)(NSArray* currentVersions)) completion
 {
     NSURL *baseURL = [NSURL URLWithString:BaseURLString];
-    
-    //__block NSDictionary *json;
-    //__block NSArray *catogeryList;
-    AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:baseURL];
 
-    __block NSArray *cl;
+    AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:baseURL];
     [manager GET:@"api/category_list?" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject)
     {
-        NSLog(@"JSON: %@", responseObject);
         
+        NSLog(@"JSON: %@", responseObject);
         //NSError *error;
          NSLog(@"before json dictionary");
         NSDictionary *json = (NSDictionary *)responseObject;
          NSLog(@"after json dictionary before arry");
-        NSArray *catogeryList = [json objectForKey:@"categoryList"];
-         //NSLog(@"after array selector");
-        cl = catogeryList;
+        NSArray *current = [json objectForKey:@"categoryList"];
+        
+        if(completion){
+            completion(current);
+        }
+       
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error)
     {
          NSLog(@"Error: %@", error);
      }];
-    
-    return cl;
     
  }
 

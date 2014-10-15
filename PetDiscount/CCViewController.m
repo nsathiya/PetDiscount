@@ -9,11 +9,13 @@
 #import "CCViewController.h"
 #import "ServerCalls.h"
 #import "Locater.h"
+#import "CategoryTableViewController.h"
 
 
 @interface CCViewController ()
 
 @property Locater *locater;
+@property NSArray* list;
 
 @end
 
@@ -38,14 +40,38 @@
 }
 - (IBAction)CatogeriesClicked:(id)sender
 {
+    [ServerCalls catogery_list:^(NSArray* list){
+        
+        _list = list;
+        NSLog(@"The array list count is %lu", (unsigned long)_list.count);
+     
+    }];
     
-    NSArray *list = [ServerCalls catogery_list];
-    NSLog(@"The array list count is %lu", (unsigned long)list.count);
+    double delayInSeconds = 2.0;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+       [self performSegueWithIdentifier:@"getCategory" sender:sender];
+    });
+    
+    
+    
 }
 
 - (IBAction)getLocation:(id)sender
 {
     [_locater startUpdating];
     [_locater updatedisplay:self];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"getCategory"]) {
+        
+        CategoryTableViewController *vc = [segue destinationViewController];
+        
+         NSLog(@"Entering Segue");
+        // Pass the information to your destination view
+        [vc setList:_list];
+    }
 }
 @end

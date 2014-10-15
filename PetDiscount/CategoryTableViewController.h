@@ -11,4 +11,6 @@
 
 @interface CategoryTableViewController : UITableViewController
 
+@property (nonatomic, strong)NSArray *list;
+
 @end
