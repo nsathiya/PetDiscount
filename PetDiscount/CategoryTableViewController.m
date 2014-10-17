@@ -125,7 +125,7 @@
     
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    
+    /*
     if ([[segue identifier] isEqualToString:@"showStoreDetails"])
     {
         StoreInfoViewController *detailViewController =
@@ -142,6 +142,7 @@
         NSLog(@"transferrED data to store info view controller");
         
     }
+     */
 }
 
 

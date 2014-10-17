@@ -13,6 +13,7 @@
 
 @interface MainMenuViewController : UIViewController <ServerCallsDelegate>
 - (IBAction)getLatest:(id)sender;
+
 - (IBAction)getCategories:(id)sender;
 - (IBAction)goToSearch:(id)sender;
 
