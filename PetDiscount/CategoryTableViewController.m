@@ -116,16 +116,34 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a story board-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    if ([[segue identifier] isEqualToString:@"showStoreDetails"])
+    {
+        StoreInfoViewController *detailViewController =
+        [segue destinationViewController];
+        
+        NSIndexPath *myIndexPath = [self.tableView
+                                    indexPathForSelectedRow];
+        
+        long row = [myIndexPath row];
+        
+        NSLog(@"transferring data to store info view controller");
+        
+        detailViewController.storeDetailModel = @[[[_places objectAtIndex:row] objectForKey:@"name"],[[_places objectAtIndex:row] objectForKey:@"product_image"]];
+        NSLog(@"transferrED data to store info view controller");
+        
+    }
 }
 
- */
+
 
 @end
