@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ServerCalls.h"
 
-@interface CCViewController : UIViewController
+@interface CCViewController : UIViewController <ServerCallsDelegate>
 - (IBAction)getLocation:(id)sender;
 @property (weak, nonatomic) IBOutlet UILabel *LongitudeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *latitudeLabel;

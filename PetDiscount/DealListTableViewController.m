@@ -1,19 +1,18 @@
 //
-//  CategoryTableViewController.m
+//  DealListTableViewController.m
 //  PetDiscount
 //
-//  Created by Naren Sathiya on 10/13/14.
+//  Created by Naren Sathiya on 10/17/14.
 //  Copyright (c) 2014 Naren Sathiya. All rights reserved.
 //
 
-#import "CategoryTableViewController.h"
-#import "CatogeryCell.h"
+#import "DealListTableViewController.h"
 
-@interface CategoryTableViewController ()
+@interface DealListTableViewController ()
 
 @end
 
-@implementation CategoryTableViewController
+@implementation DealListTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -27,8 +26,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-   
 
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
+ 
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning
@@ -41,39 +44,25 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+#warning Potentially incomplete method implementation.
+    // Return the number of sections.
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSLog(@"The array list count from table view is %lu", (unsigned long)_list.count);
-    return self.list.count;
+#warning Incomplete method implementation.
+    // Return the number of rows in the section.
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
     // Configure the cell...
-    CatogeryCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if(cell == nil){
-        cell = [[CatogeryCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-    }
     
-    long row = [indexPath row];
-    
-    NSDictionary *catogery = [self.list objectAtIndex:row];
-    //NSInteger category_id = [catogery objectForKey:@"category_id"];
-    NSString *catogery_name = [catogery objectForKey:@"category_name"];
-    NSString *url = [NSString stringWithFormat:@"http://app.petdiscounts.com/admin/%@",[catogery objectForKey:@"category_marker"]];
-    
-    
-    NSURL *imageURL = [NSURL URLWithString:url];
-    NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
-    UIImage *image = [UIImage imageWithData:imageData];
-    
-    NSLog(@"category row is %@", url);
-    cell.catogeryLabel.text = catogery_name;
-    cell.catogeryPicture.image = image;
     return cell;
 }
 

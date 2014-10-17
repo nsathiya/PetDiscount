@@ -13,33 +13,31 @@ static NSString* const BaseURLString = @"http://app.petdiscounts.com/admin/";
 
 @implementation ServerCalls
 
-+ (NSArray *) catogery_list
+@synthesize delegate;
+
+
+
+- (void) catogery_list
 {
     NSURL *baseURL = [NSURL URLWithString:BaseURLString];
-    
-    //__block NSDictionary *json;
-    //__block NSArray *catogeryList;
-    AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:baseURL];
 
-    __block NSArray *cl;
+    AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:baseURL];
     [manager GET:@"api/category_list?" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject)
     {
-        NSLog(@"JSON: %@", responseObject);
         
-        //NSError *error;
-         NSLog(@"before json dictionary");
+        NSLog(@"JSON: %@", responseObject);
         NSDictionary *json = (NSDictionary *)responseObject;
          NSLog(@"after json dictionary before arry");
-        NSArray *catogeryList = [json objectForKey:@"categoryList"];
-         //NSLog(@"after array selector");
-        cl = catogeryList;
+        NSArray *data = [json objectForKey:@"categoryList"];
+        [delegate client:self sendWithData:data to:@"getCategory"];
+       
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error)
     {
          NSLog(@"Error: %@", error);
      }];
     
-    return cl;
+
     
  }
 
@@ -59,7 +57,7 @@ static NSString* const BaseURLString = @"http://app.petdiscounts.com/admin/";
      }];
 }
 
-+ (void) latest_deals: (NSString*) start_index itemsPerPage:(NSString*) items_per_page
+- (void) latest_deals: (NSString*) start_index itemsPerPage:(NSString*) items_per_page
 {
     NSURL *baseURL = [NSURL URLWithString:BaseURLString];
     
@@ -72,6 +70,10 @@ static NSString* const BaseURLString = @"http://app.petdiscounts.com/admin/";
     [manager GET:@"api/latest_deals?" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
          NSLog(@"JSON: %@", responseObject);
+         NSDictionary *json = (NSDictionary *)responseObject;
+         NSLog(@"after json dictionary before arry");
+         NSArray *data = [json objectForKey:@"categoryList"];
+         [delegate client:self sendWithData:data to:@"getLatestDeals"];
          
      } failure:^(AFHTTPRequestOperation *operation, NSError *error)
      {

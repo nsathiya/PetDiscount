@@ -7,14 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CCViewController.h"
+//#import "CCViewController.h"
 
 @interface Locater : NSObject  <CLLocationManagerDelegate>
 
 
 - (void) initLocater;
 - (void) startUpdating;
-- (void) updatedisplay:(CCViewController *)vc;
+//- (void) updatedisplay:(CCViewController *)vc;
 @property (strong, nonatomic) IBOutlet NSString *currentLatitude;
 @property (strong, nonatomic) IBOutlet NSString *currentLongitude;
 @property (strong, nonatomic) IBOutlet NSString *curentAddress;

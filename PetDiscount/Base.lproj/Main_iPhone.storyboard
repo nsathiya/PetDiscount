@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main Menu View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="CCViewController" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="MainMenuViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ndZ-ZR-PXN"/>
                         <viewControllerLayoutGuide type="bottom" id="ofe-wG-u8o"/>
@@ -23,9 +23,15 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="CatogeriesClicked:" destination="vXZ-lx-hvc" eventType="touchDown" id="EZH-iQ-Tc1"/>
-                                    <segue destination="6tm-cI-T0O" kind="push" id="EHt-bK-NeY"/>
+                                    <action selector="getCategories:" destination="vXZ-lx-hvc" eventType="touchDown" id="4au-YD-YVd"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWx-1Z-4Zb">
+                                <rect key="frame" x="52" y="201" width="78" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Settings">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BBT-Et-CZK">
                                 <rect key="frame" x="84" y="382" width="152" height="30"/>
@@ -57,14 +63,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="O4t-h1-NGR"/>
                     <connections>
-                        <outlet property="LongitudeLabel" destination="SKX-2N-J9c" id="SVG-cZ-9TK"/>
-                        <outlet property="addressLabel" destination="sIt-ss-8XB" id="B5i-8I-2wS"/>
-                        <outlet property="latitudeLabel" destination="v11-2c-Db5" id="pok-wK-4FJ"/>
+                        <segue destination="6tm-cI-T0O" kind="push" identifier="getCategory" id="4N0-oz-3ZA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="762" y="-35"/>
         </scene>
         <!--Category Table View Controller-->
         <scene sceneID="gwb-Mp-eB3">
@@ -75,8 +81,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="yu2-pU-t0v" customClass="CatogeryCell">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="yu2-pU-t0v" customClass="CatogeryCell">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yu2-pU-t0v" id="1FI-41-iVM">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -107,7 +113,25 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n4H-or-xpa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="725" y="19"/>
+            <point key="canvasLocation" x="1251" y="19"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ggl-x0-xtz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4Aa-Ol-Tr2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dPK-3z-2Kh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="vGe-cr-AMT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iPg-C3-Zpj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-171" y="-59"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
