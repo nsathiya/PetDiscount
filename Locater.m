@@ -72,6 +72,7 @@
     } ];
 }
 
+/*
 - (void)updatedisplay:(CCViewController *)vc
 {
     
@@ -84,6 +85,6 @@
     //[locationManager stopUpdatingLocation];
 }
 
-
+*/
 
 @end

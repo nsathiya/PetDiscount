@@ -7,7 +7,6 @@
 //
 
 #import "CCViewController.h"
-#import "ServerCalls.h"
 #import "Locater.h"
 #import "CategoryTableViewController.h"
 
@@ -40,22 +39,16 @@
 }
 - (IBAction)CatogeriesClicked:(id)sender
 {
-    [ServerCalls catogery_list:^(NSArray* list){
-        
-        _list = list;
-        NSLog(@"The array list count is %lu", (unsigned long)_list.count);
-     
-    }];
-    
-    double delayInSeconds = 2.0;
-    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
-    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-       [self performSegueWithIdentifier:@"getCategory" sender:sender];
-    });
-    
-    
-    
+    ServerCalls *client = [[ServerCalls alloc] init];
+    client.delegate = self;
+    [client catogery_list];
 }
+
+-(void)client:(ServerCalls *)serverCalls sendWithData:(NSArray *)responseObject{
+    _list = responseObject;
+    [self performSegueWithIdentifier:@"getCategory" sender:nil];
+}
+
 
 - (IBAction)getLocation:(id)sender
 {

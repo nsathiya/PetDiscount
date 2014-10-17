@@ -15,7 +15,6 @@
 		4147FD0619E6328600882058 /* CCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4147FD0519E6328600882058 /* CCAppDelegate.m */; };
 		4147FD0919E6328600882058 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4147FD0719E6328600882058 /* Main_iPhone.storyboard */; };
 		4147FD0C19E6328600882058 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4147FD0A19E6328600882058 /* Main_iPad.storyboard */; };
-		4147FD0F19E6328600882058 /* CCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4147FD0E19E6328600882058 /* CCViewController.m */; };
 		4147FD1119E6328600882058 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4147FD1019E6328600882058 /* Images.xcassets */; };
 		4147FD1819E6328600882058 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4147FD1719E6328600882058 /* XCTest.framework */; };
 		4147FD1919E6328600882058 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4147FCF519E6328600882058 /* Foundation.framework */; };
@@ -48,6 +47,9 @@
 		4147FD7319EBAB1C00882058 /* Locater.m in Sources */ = {isa = PBXBuildFile; fileRef = 4147FD7219EBAB1C00882058 /* Locater.m */; };
 		4147FD7619EC9B5D00882058 /* CategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4147FD7519EC9B5D00882058 /* CategoryTableViewController.m */; };
 		4147FD7919EC9B7F00882058 /* CatogeryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4147FD7819EC9B7F00882058 /* CatogeryCell.m */; };
+		4191DFA819F10A84002A7608 /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4191DFA719F10A84002A7608 /* MainMenuViewController.m */; };
+		4191DFAB19F10AFD002A7608 /* DealListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4191DFAA19F10AFD002A7608 /* DealListTableViewController.m */; };
+		4191DFAE19F10B2B002A7608 /* DealDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4191DFAD19F10B2B002A7608 /* DealDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,8 +75,6 @@
 		4147FD0519E6328600882058 /* CCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCAppDelegate.m; sourceTree = "<group>"; };
 		4147FD0819E6328600882058 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		4147FD0B19E6328600882058 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		4147FD0D19E6328600882058 /* CCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCViewController.h; sourceTree = "<group>"; };
-		4147FD0E19E6328600882058 /* CCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCViewController.m; sourceTree = "<group>"; };
 		4147FD1019E6328600882058 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4147FD1619E6328600882058 /* PetDiscountTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PetDiscountTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4147FD1719E6328600882058 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -130,6 +130,12 @@
 		4147FD7519EC9B5D00882058 /* CategoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryTableViewController.m; sourceTree = "<group>"; };
 		4147FD7719EC9B7F00882058 /* CatogeryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatogeryCell.h; sourceTree = "<group>"; };
 		4147FD7819EC9B7F00882058 /* CatogeryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatogeryCell.m; sourceTree = "<group>"; };
+		4191DFA619F10A84002A7608 /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
+		4191DFA719F10A84002A7608 /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
+		4191DFA919F10AFD002A7608 /* DealListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DealListTableViewController.h; sourceTree = "<group>"; };
+		4191DFAA19F10AFD002A7608 /* DealListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DealListTableViewController.m; sourceTree = "<group>"; };
+		4191DFAC19F10B2B002A7608 /* DealDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DealDetailViewController.h; sourceTree = "<group>"; };
+		4191DFAD19F10B2B002A7608 /* DealDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DealDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,13 +212,17 @@
 				4147FD0419E6328600882058 /* CCAppDelegate.h */,
 				4147FD0519E6328600882058 /* CCAppDelegate.m */,
 				4147FD0719E6328600882058 /* Main_iPhone.storyboard */,
+				4191DFA619F10A84002A7608 /* MainMenuViewController.h */,
+				4191DFA919F10AFD002A7608 /* DealListTableViewController.h */,
+				4191DFAA19F10AFD002A7608 /* DealListTableViewController.m */,
+				4191DFAC19F10B2B002A7608 /* DealDetailViewController.h */,
+				4191DFAD19F10B2B002A7608 /* DealDetailViewController.m */,
+				4191DFA719F10A84002A7608 /* MainMenuViewController.m */,
 				4147FD7419EC9B5D00882058 /* CategoryTableViewController.h */,
 				4147FD7519EC9B5D00882058 /* CategoryTableViewController.m */,
 				4147FD7719EC9B7F00882058 /* CatogeryCell.h */,
 				4147FD7819EC9B7F00882058 /* CatogeryCell.m */,
 				4147FD0A19E6328600882058 /* Main_iPad.storyboard */,
-				4147FD0D19E6328600882058 /* CCViewController.h */,
-				4147FD0E19E6328600882058 /* CCViewController.m */,
 				4147FD2D19E6342400882058 /* ServerCalls.h */,
 				4147FD2E19E6342400882058 /* ServerCalls.m */,
 				4147FD1019E6328600882058 /* Images.xcassets */,
@@ -404,10 +414,13 @@
 				4147FD6519E6352C00882058 /* UIRefreshControl+AFNetworking.m in Sources */,
 				4147FD6119E6352C00882058 /* UIAlertView+AFNetworking.m in Sources */,
 				4147FD0619E6328600882058 /* CCAppDelegate.m in Sources */,
+				4191DFAB19F10AFD002A7608 /* DealListTableViewController.m in Sources */,
 				4147FD4819E6351C00882058 /* AFSecurityPolicy.m in Sources */,
+				4191DFAE19F10B2B002A7608 /* DealDetailViewController.m in Sources */,
 				4147FD7319EBAB1C00882058 /* Locater.m in Sources */,
 				4147FD7919EC9B7F00882058 /* CatogeryCell.m in Sources */,
 				4147FD0219E6328600882058 /* main.m in Sources */,
+				4191DFA819F10A84002A7608 /* MainMenuViewController.m in Sources */,
 				4147FD4519E6351C00882058 /* AFHTTPRequestOperationManager.m in Sources */,
 				4147FD4919E6351C00882058 /* AFURLConnectionOperation.m in Sources */,
 				4147FD7619EC9B5D00882058 /* CategoryTableViewController.m in Sources */,
@@ -422,7 +435,6 @@
 				4147FD6619E6352C00882058 /* UIWebView+AFNetworking.m in Sources */,
 				4147FD4C19E6351C00882058 /* AFURLSessionManager.m in Sources */,
 				4147FD5F19E6352C00882058 /* AFNetworkActivityIndicatorManager.m in Sources */,
-				4147FD0F19E6328600882058 /* CCViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -641,6 +653,7 @@
 				4147FD2919E6328600882058 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4147FD2A19E6328600882058 /* Build configuration list for PBXNativeTarget "PetDiscountTests" */ = {
 			isa = XCConfigurationList;
@@ -649,6 +662,7 @@
 				4147FD2C19E6328600882058 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

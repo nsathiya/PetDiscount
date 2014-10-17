@@ -13,7 +13,11 @@ static NSString* const BaseURLString = @"http://app.petdiscounts.com/admin/";
 
 @implementation ServerCalls
 
-+ (void) catogery_list:(void (^)(NSArray* currentVersions)) completion
+@synthesize delegate;
+
+
+
+- (void) catogery_list
 {
     NSURL *baseURL = [NSURL URLWithString:BaseURLString];
 
@@ -22,21 +26,18 @@ static NSString* const BaseURLString = @"http://app.petdiscounts.com/admin/";
     {
         
         NSLog(@"JSON: %@", responseObject);
-        //NSError *error;
-         NSLog(@"before json dictionary");
         NSDictionary *json = (NSDictionary *)responseObject;
          NSLog(@"after json dictionary before arry");
-        NSArray *current = [json objectForKey:@"categoryList"];
-        
-        if(completion){
-            completion(current);
-        }
+        NSArray *data = [json objectForKey:@"categoryList"];
+        [delegate client:self sendWithData:data to:@"getCategory"];
        
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error)
     {
          NSLog(@"Error: %@", error);
      }];
+    
+
     
  }
 
@@ -56,7 +57,7 @@ static NSString* const BaseURLString = @"http://app.petdiscounts.com/admin/";
      }];
 }
 
-+ (void) latest_deals: (NSString*) start_index itemsPerPage:(NSString*) items_per_page
+- (void) latest_deals: (NSString*) start_index itemsPerPage:(NSString*) items_per_page
 {
     NSURL *baseURL = [NSURL URLWithString:BaseURLString];
     
@@ -69,6 +70,10 @@ static NSString* const BaseURLString = @"http://app.petdiscounts.com/admin/";
     [manager GET:@"api/latest_deals?" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
          NSLog(@"JSON: %@", responseObject);
+         NSDictionary *json = (NSDictionary *)responseObject;
+         NSLog(@"after json dictionary before arry");
+         NSArray *data = [json objectForKey:@"categoryList"];
+         [delegate client:self sendWithData:data to:@"getLatestDeals"];
          
      } failure:^(AFHTTPRequestOperation *operation, NSError *error)
      {
