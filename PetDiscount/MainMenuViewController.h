@@ -10,11 +10,15 @@
 #import "ServerCalls.h"
 #import "Locater.h"
 #import "CategoryTableViewController.h"
+#import "DealListTableViewController.h"
+#import "AboutViewController.h"
 
 @interface MainMenuViewController : UIViewController <ServerCallsDelegate>
-- (IBAction)getLatest:(id)sender;
 
 - (IBAction)getCategories:(id)sender;
 - (IBAction)goToSearch:(id)sender;
+- (IBAction)getLatest:(id)sender;
+- (IBAction)goToAbout:(id)sender;
+
 
 @end

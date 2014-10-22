@@ -8,6 +8,7 @@
 
 #import "CategoryTableViewController.h"
 #import "CatogeryCell.h"
+#import "DealListTableViewController.h"
 
 @interface CategoryTableViewController ()
 
@@ -72,9 +73,27 @@
     UIImage *image = [UIImage imageWithData:imageData];
     
     NSLog(@"category row is %@", url);
-    cell.catogeryLabel.text = catogery_name;
-    cell.catogeryPicture.image = image;
+    cell.categoryTitle.text = catogery_name;
+    cell.categoryImage.image = image;
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    ServerCalls *client = [[ServerCalls alloc] init];
+    client.delegate = self;
+    NSIndexPath *myIndexPath = [self.tableView indexPathForSelectedRow];
+    long row = [myIndexPath row];
+    
+    NSDictionary *catogery = [self.list objectAtIndex:row];
+    NSString *category_id = [catogery objectForKey:@"category_id"];
+    [client deal_by_catogery:category_id startIndex:@"0" itemsPerPage:@"10"];
+
+}
+
+-(void)client:(ServerCalls *)serverCalls sendWithData:(NSArray *)responseObject to:(NSString*)view {
+    _dealList = responseObject;
+    [self performSegueWithIdentifier:view sender:nil];
 }
 
 /*
@@ -125,24 +144,13 @@
     
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    /*
-    if ([[segue identifier] isEqualToString:@"showStoreDetails"])
+    
+    if ([[segue identifier] isEqualToString:@"getCategoryDeals"])
     {
-        StoreInfoViewController *detailViewController =
-        [segue destinationViewController];
+        DealListTableViewController *DLTVC = [segue destinationViewController];
         
-        NSIndexPath *myIndexPath = [self.tableView
-                                    indexPathForSelectedRow];
-        
-        long row = [myIndexPath row];
-        
-        NSLog(@"transferring data to store info view controller");
-        
-        detailViewController.storeDetailModel = @[[[_places objectAtIndex:row] objectForKey:@"name"],[[_places objectAtIndex:row] objectForKey:@"product_image"]];
-        NSLog(@"transferrED data to store info view controller");
-        
+        [DLTVC setList:_dealList];
     }
-     */
 }
 
 

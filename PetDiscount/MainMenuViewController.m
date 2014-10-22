@@ -44,6 +44,10 @@
     [client latest_deals:@"0" itemsPerPage:@"10"];
 }
 
+- (IBAction)goToAbout:(id)sender {
+    [self performSegueWithIdentifier:@"getAbout" sender:nil];
+}
+
 - (IBAction)getCategories:(id)sender {
     ServerCalls *client = [[ServerCalls alloc] init];
     client.delegate = self;
@@ -58,19 +62,28 @@
 - (IBAction)goToSearch:(id)sender {
 }
 
+
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
+    NSLog(@"segue is %@", [segue identifier]);
     if ([[segue identifier] isEqualToString:@"getCategory"]) {
         
-        CategoryTableViewController *vc = [segue destinationViewController];
+        CategoryTableViewController *CTVC = [segue destinationViewController];
         // Pass the information to your destination view
-        [vc setList:_list];
+        [CTVC setList:_list];
     }
     if ([[segue identifier] isEqualToString:@"getLatestDeals"]) {
         
-        CategoryTableViewController *vc = [segue destinationViewController];
+        DealListTableViewController *DLTVC = [segue destinationViewController];
         // Pass the information to your destination view
-        [vc setList:_list];
+        [DLTVC setList:_list];
+    
+    }
+    if ([[segue identifier] isEqualToString:@"getAbout"]) {
+        
+        AboutViewController *AVC = [segue destinationViewController];
+        // Pass the information to your destination view
     }
 }
 @end

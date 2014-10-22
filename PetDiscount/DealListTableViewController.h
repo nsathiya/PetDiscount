@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DetailViewCell.h"
+#import "ServerCalls.h"
+#import "DealDetailViewController.h"
 
-@interface DealListTableViewController : UITableViewController
+@interface DealListTableViewController : UITableViewController <ServerCallsDelegate>
+
+@property (nonatomic, strong)NSArray *list;
+@property (nonatomic, strong)NSArray *dealDetail;
 
 @end

@@ -47,6 +47,8 @@
 		4147FD7319EBAB1C00882058 /* Locater.m in Sources */ = {isa = PBXBuildFile; fileRef = 4147FD7219EBAB1C00882058 /* Locater.m */; };
 		4147FD7619EC9B5D00882058 /* CategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4147FD7519EC9B5D00882058 /* CategoryTableViewController.m */; };
 		4147FD7919EC9B7F00882058 /* CatogeryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4147FD7819EC9B7F00882058 /* CatogeryCell.m */; };
+		417A656C19F7BB8E00CEA38F /* DetailViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 417A656B19F7BB8E00CEA38F /* DetailViewCell.m */; };
+		417A657519F85E0100CEA38F /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 417A657419F85E0100CEA38F /* AboutViewController.m */; };
 		4191DFA819F10A84002A7608 /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4191DFA719F10A84002A7608 /* MainMenuViewController.m */; };
 		4191DFAB19F10AFD002A7608 /* DealListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4191DFAA19F10AFD002A7608 /* DealListTableViewController.m */; };
 		4191DFAE19F10B2B002A7608 /* DealDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4191DFAD19F10B2B002A7608 /* DealDetailViewController.m */; };
@@ -129,6 +131,10 @@
 		4147FD7519EC9B5D00882058 /* CategoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryTableViewController.m; sourceTree = "<group>"; };
 		4147FD7719EC9B7F00882058 /* CatogeryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatogeryCell.h; sourceTree = "<group>"; };
 		4147FD7819EC9B7F00882058 /* CatogeryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatogeryCell.m; sourceTree = "<group>"; };
+		417A656A19F7BB8E00CEA38F /* DetailViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewCell.h; sourceTree = "<group>"; };
+		417A656B19F7BB8E00CEA38F /* DetailViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewCell.m; sourceTree = "<group>"; };
+		417A657319F85E0100CEA38F /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		417A657419F85E0100CEA38F /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		4191DFA619F10A84002A7608 /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
 		4191DFA719F10A84002A7608 /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
 		4191DFA919F10AFD002A7608 /* DealListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DealListTableViewController.h; sourceTree = "<group>"; };
@@ -212,6 +218,8 @@
 				4147FD0419E6328600882058 /* CCAppDelegate.h */,
 				4147FD0519E6328600882058 /* CCAppDelegate.m */,
 				4147FD0719E6328600882058 /* Main_iPhone.storyboard */,
+				417A656A19F7BB8E00CEA38F /* DetailViewCell.h */,
+				417A656B19F7BB8E00CEA38F /* DetailViewCell.m */,
 				4191DFA619F10A84002A7608 /* MainMenuViewController.h */,
 				4191DFA919F10AFD002A7608 /* DealListTableViewController.h */,
 				4191DFAA19F10AFD002A7608 /* DealListTableViewController.m */,
@@ -227,6 +235,8 @@
 				4147FD2E19E6342400882058 /* ServerCalls.m */,
 				4147FD1019E6328600882058 /* Images.xcassets */,
 				4147FCFC19E6328600882058 /* Supporting Files */,
+				417A657319F85E0100CEA38F /* AboutViewController.h */,
+				417A657419F85E0100CEA38F /* AboutViewController.m */,
 			);
 			path = PetDiscount;
 			sourceTree = "<group>";
@@ -413,11 +423,13 @@
 				4147FD6219E6352C00882058 /* UIButton+AFNetworking.m in Sources */,
 				4147FD6519E6352C00882058 /* UIRefreshControl+AFNetworking.m in Sources */,
 				4147FD6119E6352C00882058 /* UIAlertView+AFNetworking.m in Sources */,
+				417A656C19F7BB8E00CEA38F /* DetailViewCell.m in Sources */,
 				4147FD0619E6328600882058 /* CCAppDelegate.m in Sources */,
 				4191DFAB19F10AFD002A7608 /* DealListTableViewController.m in Sources */,
 				4147FD4819E6351C00882058 /* AFSecurityPolicy.m in Sources */,
 				4191DFAE19F10B2B002A7608 /* DealDetailViewController.m in Sources */,
 				4147FD7319EBAB1C00882058 /* Locater.m in Sources */,
+				417A657519F85E0100CEA38F /* AboutViewController.m in Sources */,
 				4147FD7919EC9B7F00882058 /* CatogeryCell.m in Sources */,
 				4147FD0219E6328600882058 /* main.m in Sources */,
 				4191DFA819F10A84002A7608 /* MainMenuViewController.m in Sources */,

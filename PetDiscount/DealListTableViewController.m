@@ -44,26 +44,70 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return self.list.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
+    static NSString *CellIdentifier = @"DealCell";
     // Configure the cell...
+    DetailViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if(cell == nil){
+        cell = [[DetailViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    
+    long row = [indexPath row];
+    
+    NSDictionary *deal = [self.list objectAtIndex:row];
+    
+    NSString *imageUrl = [NSString stringWithFormat:@"http://app.petdiscounts.com/admin/%@",[deal objectForKey:@"image"]];
+    NSString *categoryUrl = [NSString stringWithFormat:@"http://app.petdiscounts.com/admin/%@",[deal objectForKey:@"category_marker"]];
+    
+    
+    NSURL *imageURL = [NSURL URLWithString:imageUrl];
+    NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
+    NSURL *categoryURL = [NSURL URLWithString:categoryUrl];
+    NSData *categoryData = [NSData dataWithContentsOfURL:categoryURL];
+    
+    UIImage *dealImage = [UIImage imageWithData:imageData];
+    NSString *afterValue = [deal objectForKey:@"after_discount_value"];
+    NSString *beforeValue = [deal objectForKey:@"start_value"];
+    NSString *dealTitle = [deal objectForKey:@"title"];
+    UIImage *categoryMarker = [UIImage imageWithData:categoryData];
+    NSString *endDate = [deal objectForKey:@"end_date"];
+    
+    cell.discountImage.image = dealImage;
+    cell.discountMarker.image = categoryMarker;
+    cell.discountTitle.text = dealTitle;
+    cell.afterValue.text = afterValue;
+    cell.beforeValue.text = beforeValue;
+    cell.discountEnd.text = endDate;
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    ServerCalls *client = [[ServerCalls alloc] init];
+    client.delegate = self;
+    NSIndexPath *myIndexPath = [self.tableView indexPathForSelectedRow];
+    long row = [myIndexPath row];
+    
+    NSDictionary *deal = [self.list objectAtIndex:row];
+    NSString *deal_id = [deal objectForKey:@"deal_id"];
+    [client deal_detail:deal_id];
+}
+
+-(void)client:(ServerCalls *)serverCalls sendWithData:(NSArray *)responseObject to:(NSString*)view {
+    _dealDetail = responseObject;
+    [self performSegueWithIdentifier:view sender:nil];
 }
 
 /*
@@ -105,7 +149,7 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a story board-based application, you will often want to do a little preparation before navigation
@@ -113,8 +157,14 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    if ([[segue identifier] isEqualToString:@"getDealDetail"])
+    {
+        DealDetailViewController *DDVC = [segue destinationViewController];
+        
+        [DDVC setDealDetail:self.dealDetail];
+    }
 }
 
- */
 
 @end

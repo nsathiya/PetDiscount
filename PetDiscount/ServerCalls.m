@@ -72,7 +72,7 @@ static NSString* const BaseURLString = @"http://app.petdiscounts.com/admin/";
          NSLog(@"JSON: %@", responseObject);
          NSDictionary *json = (NSDictionary *)responseObject;
          NSLog(@"after json dictionary before arry");
-         NSArray *data = [json objectForKey:@"categoryList"];
+         NSArray *data = [json objectForKey:@"latestDeals"];
          [delegate client:self sendWithData:data to:@"getLatestDeals"];
          
      } failure:^(AFHTTPRequestOperation *operation, NSError *error)
@@ -81,20 +81,24 @@ static NSString* const BaseURLString = @"http://app.petdiscounts.com/admin/";
      }];
 }
 
-+ (void) deal_by_catogery:(NSString*) catogery_id startIndex:(NSString*) start_index itemsPerPage:(NSString*) items_per_page
+- (void) deal_by_catogery:(NSString*) catogery_id startIndex:(NSString*) start_index itemsPerPage:(NSString*) items_per_page
 {
     NSURL *baseURL = [NSURL URLWithString:BaseURLString];
     
     AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc] initWithBaseURL:baseURL];
     
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"catogery_id"] = catogery_id;
-    params[@"start_index"] = start_index;
+    params[@"category_id"] = catogery_id;
     params[@"items_per_page"] = items_per_page;
+    params[@"start_index"] = start_index;
     
-    [manager GET:@"api/deal_by_catogery?" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject)
+    [manager GET:@"api/deal_by_category?" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
          NSLog(@"JSON: %@", responseObject);
+         NSDictionary *json = (NSDictionary *)responseObject;
+         NSLog(@"after json dictionary before arry");
+         NSArray *data = [json objectForKey:@"dealByCategory"];
+         [delegate client:self sendWithData:data to:@"getCategoryDeals"];
          
      } failure:^(AFHTTPRequestOperation *operation, NSError *error)
      {
@@ -102,7 +106,7 @@ static NSString* const BaseURLString = @"http://app.petdiscounts.com/admin/";
      }];
 }
 
-+ (void) deal_detail: (NSString*) deal_id
+- (void) deal_detail: (NSString*) deal_id
 {
     NSURL *baseURL = [NSURL URLWithString:BaseURLString];
     
@@ -114,6 +118,10 @@ static NSString* const BaseURLString = @"http://app.petdiscounts.com/admin/";
     [manager GET:@"api/deal_detail?" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
          NSLog(@"JSON: %@", responseObject);
+         NSDictionary *json = (NSDictionary *)responseObject;
+         NSLog(@"after json dictionary before arry");
+         NSArray *data = [json objectForKey:@"dealDetail"];
+         [delegate client:self sendWithData:data to:@"getDealDetail"];
          
      } failure:^(AFHTTPRequestOperation *operation, NSError *error)
      {

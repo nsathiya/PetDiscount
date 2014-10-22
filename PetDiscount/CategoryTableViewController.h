@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "ServerCalls.h"
 
-@interface CategoryTableViewController : UITableViewController
+@interface CategoryTableViewController : UITableViewController <ServerCallsDelegate>
 
 @property (nonatomic, strong)NSArray *list;
+@property (nonatomic, strong)NSArray *dealList;
 
 @end
