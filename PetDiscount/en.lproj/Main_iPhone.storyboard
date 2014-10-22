@@ -83,7 +83,7 @@
                                         <outletCollection property="gestureRecognizers" destination="oVg-it-2xg" appends="YES" id="sZz-iw-1Nh"/>
                                     </connections>
                                 </tableViewCell>
-                                <tableViewCell contentMode="scaleToFill" fixedFrame="YES" selectionStyle="default" indentationWidth="10" translatesAutoresizingMaskIntoConstraints="NO" id="I3S-wk-jit">
+                                <tableViewCell opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" selectionStyle="default" indentationWidth="10" translatesAutoresizingMaskIntoConstraints="NO" id="I3S-wk-jit">
                                     <rect key="frame" x="0.0" y="52" width="320" height="44"/>
                                     <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="I3S-wk-jit" id="Chi-Rv-cyX">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -98,7 +98,7 @@
                                     </tableViewCellContentView>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </tableViewCell>
-                                <tableViewCell contentMode="scaleToFill" fixedFrame="YES" selectionStyle="default" indentationWidth="10" translatesAutoresizingMaskIntoConstraints="NO" id="VNY-KB-Jmh">
+                                <tableViewCell opaque="NO" contentMode="scaleToFill" fixedFrame="YES" selectionStyle="default" indentationWidth="10" translatesAutoresizingMaskIntoConstraints="NO" id="VNY-KB-Jmh">
                                     <rect key="frame" x="0.0" y="104" width="320" height="44"/>
                                     <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VNY-KB-Jmh" id="fbx-bV-aUT">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -113,7 +113,7 @@
                                     </tableViewCellContentView>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </tableViewCell>
-                                <tableViewCell contentMode="scaleToFill" fixedFrame="YES" selectionStyle="default" indentationWidth="10" translatesAutoresizingMaskIntoConstraints="NO" id="I3F-Sq-5YP">
+                                <tableViewCell opaque="NO" contentMode="scaleToFill" fixedFrame="YES" selectionStyle="default" indentationWidth="10" translatesAutoresizingMaskIntoConstraints="NO" id="I3F-Sq-5YP">
                                     <rect key="frame" x="0.0" y="156" width="320" height="44"/>
                                     <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="I3F-Sq-5YP" id="rBq-V6-oyf">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -272,7 +272,7 @@
                 <tapGestureRecognizer id="oVg-it-2xg"/>
                 <tapGestureRecognizer id="u2Z-N6-fAP"/>
             </objects>
-            <point key="canvasLocation" x="653" y="-946"/>
+            <point key="canvasLocation" x="653" y="-966"/>
         </scene>
         <!--Title-->
         <scene sceneID="SXE-Z7-hAH">
@@ -357,7 +357,7 @@
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="My3-bT-ZJ9">
                                                 <rect key="frame" x="13" y="134" width="128" height="21"/>
-                                                <color key="backgroundColor" red="0.42683120050000001" green="0.73776415049999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" red="0.36193989140532901" green="0.71739536778001223" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -366,38 +366,6 @@
                                     </tableViewCellContentView>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <rect key="contentStretch" x="0.0" y="0.0" width="0.94999999999999996" height="1"/>
-                                </tableViewCell>
-                                <tableViewCell clearsContextBeforeDrawing="NO" contentMode="top" fixedFrame="YES" selectionStyle="default" indentationWidth="10" rowHeight="204" translatesAutoresizingMaskIntoConstraints="NO" id="ro0-ot-bkW">
-                                    <rect key="frame" x="8" y="320" width="307" height="204"/>
-                                    <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ro0-ot-bkW" id="o8k-GL-F64">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Sh-TO-s5e">
-                                                <rect key="frame" x="8" y="8" width="291" height="147"/>
-                                            </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L4G-ss-iMt">
-                                                <rect key="frame" x="271" y="163" width="28" height="32"/>
-                                                <gestureRecognizers/>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ygf-Vt-XLS">
-                                                <rect key="frame" x="8" y="134" width="128" height="21"/>
-                                                <color key="backgroundColor" red="0.42683120050000001" green="0.73776415049999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </tableViewCellContentView>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <rect key="contentStretch" x="0.0" y="0.0" width="0.94999999999999996" height="1"/>
-                                </tableViewCell>
-                                <tableViewCell opaque="NO" contentMode="center" fixedFrame="YES" selectionStyle="default" indentationWidth="10" rowHeight="34" translatesAutoresizingMaskIntoConstraints="NO" id="B51-XU-q12">
-                                    <rect key="frame" x="8" y="527" width="307" height="34"/>
-                                    <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" tableViewCell="B51-XU-q12" id="YQ3-25-iJ1">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </tableViewCellContentView>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </tableViewCell>
                             </subviews>
                         </scrollView>
@@ -412,7 +380,7 @@
                 <tapGestureRecognizer id="6Da-qp-fUu"/>
                 <tapGestureRecognizer id="Tf5-uD-TEJ"/>
             </objects>
-            <point key="canvasLocation" x="1002" y="-966"/>
+            <point key="canvasLocation" x="1009" y="-966"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8AD-JV-nta">
@@ -447,7 +415,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ljd-gC-Cn3">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <tableViewCell clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="top" fixedFrame="YES" selectionStyle="default" indentationWidth="10" rowHeight="276" translatesAutoresizingMaskIntoConstraints="NO" id="Oze-3p-fPA">
+                                    <tableViewCell clipsSubviews="YES" contentMode="top" fixedFrame="YES" selectionStyle="default" indentationWidth="10" rowHeight="276" translatesAutoresizingMaskIntoConstraints="NO" id="Oze-3p-fPA">
                                         <rect key="frame" x="7" y="68" width="307" height="276"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Oze-3p-fPA" id="Chr-Xt-8gY">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -542,7 +510,39 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
-                                    <tableViewCell clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" selectionStyle="default" indentationWidth="10" rowHeight="193" translatesAutoresizingMaskIntoConstraints="NO" id="aZK-kH-Bev">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dME-p4-4mi">
+                                        <rect key="frame" x="8" y="576" width="306" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xg9-qq-bTB">
+                                        <rect key="frame" x="38" y="390" width="42" height="12"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Discount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNa-Lf-8j4">
+                                        <rect key="frame" x="132" y="390" width="56" height="12"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <tableViewCell clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" selectionStyle="default" indentationWidth="10" rowHeight="30" translatesAutoresizingMaskIntoConstraints="NO" id="rr6-Fi-A0l">
+                                        <rect key="frame" x="7" y="352" width="307" height="30"/>
+                                        <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rr6-Fi-A0l" id="wTu-2f-Fmr">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sun-f9-sSt">
+                                                    <rect key="frame" x="132" y="4" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.36193989139999999" green="0.71739536780000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" fixedFrame="YES" selectionStyle="default" indentationWidth="10" rowHeight="193" translatesAutoresizingMaskIntoConstraints="NO" id="aZK-kH-Bev">
                                         <rect key="frame" x="8" y="432" width="307" height="193"/>
                                         <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aZK-kH-Bev" id="23Y-tW-g57">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -565,26 +565,12 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dME-p4-4mi">
-                                        <rect key="frame" x="8" y="576" width="306" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <tableViewCell clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" selectionStyle="default" indentationWidth="10" rowHeight="30" translatesAutoresizingMaskIntoConstraints="NO" id="rr6-Fi-A0l">
-                                        <rect key="frame" x="7" y="352" width="307" height="30"/>
-                                        <tableViewCellContentView key="contentView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rr6-Fi-A0l" id="wTu-2f-Fmr">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sun-f9-sSt">
-                                                    <rect key="frame" x="132" y="4" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </tableViewCell>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Save" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nPZ-6I-H6j">
+                                        <rect key="frame" x="242" y="388" width="42" height="16"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </scrollView>
                         </subviews>
