@@ -73,7 +73,6 @@
 		4147FD0319E6328600882058 /* PetDiscount-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PetDiscount-Prefix.pch"; sourceTree = "<group>"; };
 		4147FD0419E6328600882058 /* CCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCAppDelegate.h; sourceTree = "<group>"; };
 		4147FD0519E6328600882058 /* CCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCAppDelegate.m; sourceTree = "<group>"; };
-		4147FD0819E6328600882058 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		4147FD0B19E6328600882058 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		4147FD1019E6328600882058 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4147FD1619E6328600882058 /* PetDiscountTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PetDiscountTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +135,7 @@
 		4191DFAA19F10AFD002A7608 /* DealListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DealListTableViewController.m; sourceTree = "<group>"; };
 		4191DFAC19F10B2B002A7608 /* DealDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DealDetailViewController.h; sourceTree = "<group>"; };
 		4191DFAD19F10B2B002A7608 /* DealDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DealDetailViewController.m; sourceTree = "<group>"; };
+		C9A66CA719F12D6E00D57967 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -468,7 +468,7 @@
 		4147FD0719E6328600882058 /* Main_iPhone.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				4147FD0819E6328600882058 /* Base */,
+				C9A66CA719F12D6E00D57967 /* en */,
 			);
 			name = Main_iPhone.storyboard;
 			sourceTree = "<group>";

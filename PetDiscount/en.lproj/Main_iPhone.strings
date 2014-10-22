@@ -1,0 +1,15 @@
+
+/* Class = "IBUIButton"; normalTitle = "Get Location"; ObjectID = "BBT-Et-CZK"; */
+"BBT-Et-CZK.normalTitle" = "Get Location";
+
+/* Class = "IBUIButton"; normalTitle = "Categories"; ObjectID = "Ig2-nz-FMu"; */
+"Ig2-nz-FMu.normalTitle" = "Categories";
+
+/* Class = "IBUIButton"; normalTitle = "Latest"; ObjectID = "NRL-f7-jfz"; */
+"NRL-f7-jfz.normalTitle" = "Latest";
+
+/* Class = "IBUIButton"; normalTitle = "Settings"; ObjectID = "aWx-1Z-4Zb"; */
+"aWx-1Z-4Zb.normalTitle" = "Settings";
+
+/* Class = "IBUILabel"; text = "Catogery Name"; ObjectID = "vTd-Qj-8wG"; */
+"vTd-Qj-8wG.text" = "Catogery Name";
